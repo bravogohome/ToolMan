@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">工具人</string>
+    <string name="title_home">主页</string>
+    <string name="title_search">搜索</string>
+    <string name="title_note">笔记</string>
+    <string name="voice_begin">请开始说话...</string>
+    <string-array name="languages_from">
+        <item>自动检测</item>
+        <item>英语</item>
+        <item>日语</item>
+        <item>中文</item>
+        <item>繁体中文</item>
+        <item>文言文</item>
+        <item>韩语</item>
+        <item>法语</item>
+        <item>西班牙语</item>
+        <item>泰语</item>
+        <item>阿拉伯语</item>
+        <item>俄语</item>
+        <item>葡萄牙语</item>
+        <item>德语</item>
+        <item>意大利语</item>
+        <item>希腊语</item>
+        <item>荷兰语</item>
+        <item>波兰语</item>
+        <item>丹麦语</item>
+        <item>芬兰语</item>
+        <item>捷克语</item>
+        <item>罗马尼亚语</item>
+
+        <item>瑞典语</item>
+    </string-array>
+    <string-array name="languages_to">
+        <item>中文</item>
+        <item>英语</item>
+        <item>日语</item>
+        <item>文言文</item>
+        <item>韩语</item>
+        <item>法语</item>
+        <item>西班牙语</item>
+        <item>泰语</item>
+        <item>阿拉伯语</item>
+        <item>俄语</item>
+        <item>葡萄牙语</item>
+        <item>德语</item>
+        <item>意大利语</item>
+        <item>希腊语</item>
+        <item>荷兰语</item>
+        <item>波兰语</item>
+        <item>丹麦语</item>
+        <item>芬兰语</item>
+        <item>捷克语</item>
+        <item>罗马尼亚语</item>
+        <item>繁体中文</item>
+        <item>瑞典语</item>
+    </string-array>
+</resources>
