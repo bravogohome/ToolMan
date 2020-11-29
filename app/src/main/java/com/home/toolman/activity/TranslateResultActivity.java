@@ -1,14 +1,18 @@
 package com.home.toolman.activity;
 
+import android.content.ComponentName;
 import android.content.Intent;
 
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.text.TextUtils;
 
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +23,6 @@ import androidx.viewpager.widget.ViewPager;
 import com.home.toolman.BaseActivity;
 import com.home.toolman.R;
 
-import com.home.toolman.services.JudgementService;
 import com.home.toolman.translator.Translator;
 
 import com.home.toolman.vo.WordsBook;
@@ -42,11 +45,6 @@ public class TranslateResultActivity extends BaseActivity implements View.OnClic
         isSuccess=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_translate_result);
-
-        //查询中...
-        Intent startService=new Intent(this, JudgementService.class);
-        startService(startService);
-
         textOrigin=(TextView)findViewById(R.id.text_trans_origin);
         textResult=(TextView)findViewById(R.id.text_trans_result);
         textLibrary=(TextView)findViewById(R.id.text_trans_library);

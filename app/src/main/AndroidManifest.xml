@@ -15,11 +15,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <service
-            android:name=".services.JudgementService"
-            android:enabled="true"
-            android:exported="true"></service>
-
         <activity android:name=".activity.WordsBookActivity" />
         <activity android:name=".activity.TranslateResultActivity" />
         <activity
