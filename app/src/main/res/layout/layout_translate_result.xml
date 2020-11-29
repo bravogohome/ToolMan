@@ -4,8 +4,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#f0f0f0"
-    android:id="@+id/layout_translate_result">
+    android:background="#f0f0f0">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layout_translate_result"
+        android:visibility="gone">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -53,10 +58,22 @@
             android:textColor="#ff0000"></androidx.viewpager.widget.PagerTabStrip>
     </androidx.viewpager.widget.ViewPager>
 
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/to_book"
-        android:text="单词本测试"/>
+        android:layout_gravity="center"
+        android:background="@drawable/ic_words_book" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="翻译中..."/>
+    </LinearLayout>
+
 </LinearLayout>

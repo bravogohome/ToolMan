@@ -4,6 +4,7 @@ package com.home.toolman.tasks;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.viewpager.widget.ViewPager;
@@ -72,7 +73,7 @@ public class LibraryTask extends AsyncTask<String,Integer,String> {
         cards.add(card1);
         TransCardPagerAdapter adapter=new TransCardPagerAdapter(getContext(),cards);
         viewPager.setAdapter(adapter);
-        TranslateResultActivity.isSuccess=1;
+        TranslateResultActivity.linearLayout.setVisibility(View.VISIBLE);
     }
 
     private Map<String,String> parseToResult(String jsonData){

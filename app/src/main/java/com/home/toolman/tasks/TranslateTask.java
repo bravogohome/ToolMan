@@ -4,11 +4,13 @@ package com.home.toolman.tasks;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.viewpager.widget.ViewPager;
 
 import com.home.toolman.activity.MainActivity;
+import com.home.toolman.activity.TranslateResultActivity;
 import com.home.toolman.adapter.TransCardPagerAdapter;
 import com.home.toolman.translator.Translator;
 import com.home.toolman.vo.Card;
@@ -121,6 +123,7 @@ public class TranslateTask extends AsyncTask<Translator,Integer,List<String>>{
                 cards.add(card1);
                 TransCardPagerAdapter adapter=new TransCardPagerAdapter(getContext(),cards);
                 viewPager.setAdapter(adapter);
+                TranslateResultActivity.linearLayout.setVisibility(View.VISIBLE);
                 break;
         }
     }

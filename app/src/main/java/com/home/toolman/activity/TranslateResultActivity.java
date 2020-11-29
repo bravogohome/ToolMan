@@ -39,12 +39,13 @@ public class TranslateResultActivity extends BaseActivity implements View.OnClic
     private ImageView favoriteButton;
     private List<WordsBook> wordsBook=new ArrayList<>();
     private ViewPager viewPager;
-    public static int isSuccess=0;
+    public static LinearLayout linearLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        isSuccess=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_translate_result);
+        linearLayout=(LinearLayout)findViewById(R.id.layout_translate_result);
+        linearLayout.setVisibility(View.GONE);
         textOrigin=(TextView)findViewById(R.id.text_trans_origin);
         textResult=(TextView)findViewById(R.id.text_trans_result);
         textLibrary=(TextView)findViewById(R.id.text_trans_library);
