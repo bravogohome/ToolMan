@@ -4,8 +4,10 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-public class JudgeMentService extends Service {
-    public JudgeMentService() {
+import com.home.toolman.activity.TranslateResultActivity;
+
+public class JudgementService extends Service {
+    public JudgementService() {
     }
 
     @Override

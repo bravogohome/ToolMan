@@ -19,6 +19,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.home.toolman.BaseActivity;
 import com.home.toolman.R;
 
+import com.home.toolman.services.JudgementService;
 import com.home.toolman.translator.Translator;
 
 import com.home.toolman.vo.WordsBook;
@@ -41,6 +42,11 @@ public class TranslateResultActivity extends BaseActivity implements View.OnClic
         isSuccess=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_translate_result);
+
+        //查询中...
+        Intent startService=new Intent(this, JudgementService.class);
+        startService(startService);
+
         textOrigin=(TextView)findViewById(R.id.text_trans_origin);
         textResult=(TextView)findViewById(R.id.text_trans_result);
         textLibrary=(TextView)findViewById(R.id.text_trans_library);

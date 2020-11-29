@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <service
-            android:name=".services.JudgeMentService"
+            android:name=".services.JudgementService"
             android:enabled="true"
             android:exported="true"></service>
 
