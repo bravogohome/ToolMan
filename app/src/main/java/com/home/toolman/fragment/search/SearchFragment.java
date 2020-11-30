@@ -400,4 +400,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         initRecords();
         origin=null;
     }
+
 }
+
+

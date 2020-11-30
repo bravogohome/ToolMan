@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.viewpager.widget.ViewPager;
 
+import com.home.toolman.R;
 import com.home.toolman.activity.MainActivity;
 import com.home.toolman.activity.TranslateResultActivity;
 import com.home.toolman.adapter.TransCardPagerAdapter;
@@ -44,6 +45,8 @@ public class TranslateTask extends AsyncTask<Translator,Integer,List<String>>{
     @Override
     protected List<String> doInBackground(Translator... translators) {
         List<String> responseDataList=new ArrayList<>();
+        TranslateResultActivity.textLoading.setText("翻译中Loading..");
+        TranslateResultActivity.imageLoading.setImageResource(R.drawable.ic_loading2);
         try{
             OkHttpClient client=new OkHttpClient();//创建OKhttpClient实例
             Request request=new Request.Builder()
@@ -53,6 +56,8 @@ public class TranslateTask extends AsyncTask<Translator,Integer,List<String>>{
             String responseData=response.body().string();
             Log.d("TAG", "doInBackground: "+responseData);
             responseDataList.add(responseData);
+            TranslateResultActivity.textLoading.setText("翻译中Loading...");
+            TranslateResultActivity.imageLoading.setImageResource(R.drawable.ic_loading3);
             OkHttpClient client_youdao=new OkHttpClient();//创建OKhttpClient实例
             Request request_youdao=new Request.Builder()
                     .url(translators[0].youdaoUrl)
@@ -82,6 +87,8 @@ public class TranslateTask extends AsyncTask<Translator,Integer,List<String>>{
         card1.setMap(map);
         card1.setResult(map.get("resultWord"));
         card1.setLibrary(map.get("explain"));
+        TranslateResultActivity.textLoading.setText("翻译中Loading....");
+        TranslateResultActivity.imageLoading.setImageResource(R.drawable.ic_loading4);
     }
     private void transBaidu(List<String> responseDataList){
         List<String> rs=new ArrayList<>();
@@ -102,6 +109,8 @@ public class TranslateTask extends AsyncTask<Translator,Integer,List<String>>{
         textResult.setText(word);
         Card card=new Card();
         card.setResult(word);
+        TranslateResultActivity.textLoading.setText("翻译中Loading.....");
+        TranslateResultActivity.imageLoading.setImageResource(R.drawable.ic_loading5);
         switch(to){
             case "cht":
             case "wyw":
@@ -123,6 +132,8 @@ public class TranslateTask extends AsyncTask<Translator,Integer,List<String>>{
                 cards.add(card1);
                 TransCardPagerAdapter adapter=new TransCardPagerAdapter(getContext(),cards);
                 viewPager.setAdapter(adapter);
+                TranslateResultActivity.textLoading.setText("翻译中Loading......");
+                TranslateResultActivity.imageLoading.setImageResource(R.drawable.ic_loading6);
                 TranslateResultActivity.linearLayout.setVisibility(View.VISIBLE);
                 break;
         }

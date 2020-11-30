@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.viewpager.widget.ViewPager;
 
+import com.home.toolman.R;
 import com.home.toolman.activity.TranslateResultActivity;
 import com.home.toolman.adapter.TransCardPagerAdapter;
 import com.home.toolman.vo.Card;
@@ -48,6 +49,8 @@ public class LibraryTask extends AsyncTask<String,Integer,String> {
                     .build();
             Response response=client.newCall(request).execute();
             responseData=response.body().string();
+            TranslateResultActivity.textLoading.setText("翻译中Loading......");
+            TranslateResultActivity.imageLoading.setImageResource(R.drawable.ic_loading6);
             return responseData;
         }catch (Exception e){
             e.printStackTrace();
@@ -61,6 +64,8 @@ public class LibraryTask extends AsyncTask<String,Integer,String> {
         Map<String,String> map=new HashMap<>();
         map=parseToResult(responseData);
         String library=null;
+        TranslateResultActivity.textLoading.setText("翻译中Loading");
+        TranslateResultActivity.imageLoading.setImageResource(R.drawable.ic_loading);
         if(!TextUtils.equals(map.get("msg"),"success")){
             library=map.get("fail");
         }else{
@@ -73,6 +78,8 @@ public class LibraryTask extends AsyncTask<String,Integer,String> {
         cards.add(card1);
         TransCardPagerAdapter adapter=new TransCardPagerAdapter(getContext(),cards);
         viewPager.setAdapter(adapter);
+        TranslateResultActivity.textLoading.setText("翻译中Loading.");
+        TranslateResultActivity.imageLoading.setImageResource(R.drawable.ic_loading1);
         TranslateResultActivity.linearLayout.setVisibility(View.VISIBLE);
     }
 

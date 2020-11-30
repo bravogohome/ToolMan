@@ -40,12 +40,17 @@ public class TranslateResultActivity extends BaseActivity implements View.OnClic
     private List<WordsBook> wordsBook=new ArrayList<>();
     private ViewPager viewPager;
     public static LinearLayout linearLayout;
+    public static TextView textLoading;
+    public static ImageView imageLoading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_translate_result);
         linearLayout=(LinearLayout)findViewById(R.id.layout_translate_result);
         linearLayout.setVisibility(View.GONE);
+        textLoading=(TextView)findViewById(R.id.text_loading);
+        imageLoading=(ImageView)findViewById(R.id.image_loading);
+
         textOrigin=(TextView)findViewById(R.id.text_trans_origin);
         textResult=(TextView)findViewById(R.id.text_trans_result);
         textLibrary=(TextView)findViewById(R.id.text_trans_library);

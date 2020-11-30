@@ -59,8 +59,8 @@
     </androidx.viewpager.widget.ViewPager>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:id="@+id/to_book"
         android:layout_gravity="center"
         android:background="@drawable/ic_words_book" />
@@ -68,12 +68,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#fff">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="250dp"
+            android:layout_gravity="center"
+            android:id="@+id/image_loading"
+            android:background="@drawable/ic_loading"/>
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/text_loading"
             android:gravity="center"
-            android:text="翻译中..."/>
+            android:textSize="20sp"/>
     </LinearLayout>
 
 </LinearLayout>

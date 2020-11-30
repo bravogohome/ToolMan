@@ -5,6 +5,8 @@ import android.widget.TextView;
 
 import androidx.viewpager.widget.ViewPager;
 
+import com.home.toolman.R;
+import com.home.toolman.activity.TranslateResultActivity;
 import com.home.toolman.tasks.TranslateTask;
 import com.home.toolman.utils.MD5;
 
@@ -38,6 +40,8 @@ public class Translator {
     }
 
     public void showResultOnViewPager(ViewPager viewPager , TextView textResult, TextView textLibrary){
+        TranslateResultActivity.textLoading.setText("翻译中Loading.");
+        TranslateResultActivity.imageLoading.setImageResource(R.drawable.ic_loading1);
         new TranslateTask(viewPager,textResult,textLibrary).execute(this);
     }
 
