@@ -6,14 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.home.toolman.R;
 import com.home.toolman.activity.TranslateResultActivity;
-import com.home.toolman.fragment.search.SearchFragment;
 import com.home.toolman.vo.Record;
 
 import org.litepal.crud.DataSupport;

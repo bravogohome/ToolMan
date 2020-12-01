@@ -7,22 +7,16 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.widget.Toast;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.home.toolman.BaseActivity;
 import com.home.toolman.R;
-import com.home.toolman.fragment.note.NoteFragment;
-import com.home.toolman.fragment.search.SearchFragment;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechUtility;
-
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
 import org.litepal.tablemanager.Connector;
 
 public class MainActivity extends BaseActivity {

@@ -1,12 +1,7 @@
 package com.home.toolman.adapter;
 
-import android.content.ContentResolver;
-import android.content.ContentValues;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.media.MediaPlayer;
-import android.net.Uri;
-import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -22,21 +17,13 @@ import com.home.toolman.vo.Card;
 
 import org.json.JSONObject;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.List;
 import java.util.Map;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.internal.http2.Header;
-
-import static org.litepal.LitePalApplication.getContext;
 
 public class TransCardPagerAdapter extends PagerAdapter {
     private MediaPlayer mediaPlayer=new MediaPlayer();

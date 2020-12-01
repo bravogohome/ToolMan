@@ -6,14 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.home.toolman.BaseActivity;
 import com.home.toolman.R;
 import com.home.toolman.adapter.WordsAdapter;
 import com.home.toolman.vo.WordsBook;
@@ -25,7 +23,7 @@ import java.util.List;
 
 import static org.litepal.LitePalApplication.getContext;
 
-public class WordsBookActivity extends AppCompatActivity implements View.OnClickListener{
+public class WordsBookActivity extends BaseActivity implements View.OnClickListener{
     private RecyclerView bookRecyclerView;
     private List<WordsBook> bookList=new ArrayList<>();
     private EditText editTextSearch;

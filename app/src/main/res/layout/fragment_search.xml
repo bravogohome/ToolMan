@@ -52,6 +52,13 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:id="@+id/button_delete_origin_text"
+            android:background="@drawable/ic_delete_record"/>
+        <Button
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
             android:layout_marginRight="20dp"
             android:id="@+id/button_voice_to_origin"
             android:background="@drawable/ic_fragment_search_voice"/>

@@ -2,7 +2,6 @@ package com.home.toolman.tasks;
 
 
 import android.os.AsyncTask;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -13,6 +12,7 @@ import com.home.toolman.R;
 import com.home.toolman.activity.MainActivity;
 import com.home.toolman.activity.TranslateResultActivity;
 import com.home.toolman.adapter.TransCardPagerAdapter;
+import com.home.toolman.fragment.search.SearchFragment;
 import com.home.toolman.translator.Translator;
 import com.home.toolman.vo.Card;
 
@@ -98,6 +98,7 @@ public class TranslateTask extends AsyncTask<Translator,Integer,List<String>>{
         MainActivity.result=word;
         String from=rs.get(0);
         String to=rs.get(1);
+        SearchFragment.addRecord(from,to,src);
         Map<String,String> map1=new HashMap<>();
         map1=card1.getMap();
         map1.put("from",from);

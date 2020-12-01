@@ -29,7 +29,6 @@ import com.home.toolman.activity.TranslateResultActivity;
 import com.home.toolman.adapter.RecordAdapter;
 import com.home.toolman.utils.JsonParser;
 import com.home.toolman.vo.Record;
-import com.home.toolman.vo.WordsBook;
 import com.iflytek.cloud.ErrorCode;
 import com.iflytek.cloud.InitListener;
 import com.iflytek.cloud.RecognizerResult;
@@ -58,7 +57,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
     private HashMap<String, String> mIatResults = new LinkedHashMap<String, String>();
     private StringBuffer buffer = new StringBuffer();
     private RecyclerView recordRecyclerView;
-    private Button buttonTrans;
+    private Button buttonTrans,deleteOrigin;
     private LinearLayout recordLayout;
     private TextView deleteAllRecord;
     List<Record> recordList=new ArrayList<>();
@@ -73,6 +72,8 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         languagesTo.setOnItemSelectedListener(new SelectedListener());
         editText=(EditText)root.findViewById(R.id.edit_text_fragment_search);
         editText.setOnClickListener(this);
+        deleteOrigin=(Button)root.findViewById(R.id.button_delete_origin_text);
+        deleteOrigin.setOnClickListener(this);
         root.findViewById(R.id.button_voice_to_origin).setOnClickListener(this);
         // 初始化听写Dialog，如果只使用有UI听写功能，无需创建SpeechRecognizer
         // 使用UI听写功能，请根据sdk文件目录下的notice.txt,放置布局文件和图片资源
@@ -309,6 +310,9 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
                 });
                 dialog.show();
                 break;
+            case R.id.button_delete_origin_text:
+                editText.setText(null);
+                recordLayout.setVisibility(View.GONE);
             default:
         }
     }
@@ -317,7 +321,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         recordRecyclerView.getAdapter().notifyDataSetChanged();
         DataSupport.deleteAll(Record.class);
     }
-    private void addRecord(String word){
+    public static void addRecord(String fromParam,String toParam,String word){
         if (TextUtils.isEmpty(word)){
             return ;
         }
@@ -391,14 +395,15 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
     public void onPause() {
         super.onPause();
         MainActivity.result=null;
+        recordLayout.setVisibility(View.GONE);
+        editText.setText(null);
+        origin=null;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        addRecord(origin);
         initRecords();
-        origin=null;
     }
 
 }

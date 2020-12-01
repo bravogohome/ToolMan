@@ -20,8 +20,8 @@
             android:textCursorDrawable="@drawable/shape_fragment_search_edit_text"
             android:layout_gravity="center" />
         <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_gravity="center"
             android:layout_marginRight="20dp"
             android:id="@+id/button_delete_edit_text"

@@ -1,11 +1,7 @@
 package com.home.toolman.activity;
 
-import android.content.ComponentName;
 import android.content.Intent;
-
-import android.content.ServiceConnection;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.text.TextUtils;
 
 import android.view.View;
