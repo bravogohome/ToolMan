@@ -64,6 +64,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        Log.d("SearchFragment", "onCreateView: ");
         MainActivity.status="SearchFragment";
         View root = inflater.inflate(R.layout.fragment_search, container, false);
         languagesFrom=(Spinner)root.findViewById(R.id.choose_language_from);

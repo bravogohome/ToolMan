@@ -1,6 +1,7 @@
 package com.home.toolman.activity;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,6 +24,10 @@ public class MainActivity extends BaseActivity {
     public static String status=null;
     public static String result=null;
     private long mExitTime;
+
+    public static Context getContext() {
+        return getContext();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
