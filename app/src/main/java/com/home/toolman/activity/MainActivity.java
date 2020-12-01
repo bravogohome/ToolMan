@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_search, R.id.navigation_note)
+                R.id.navigation_note, R.id.navigation_search, R.id.navigation_news)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         //NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
@@ -64,7 +64,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         //点击两次返回退出app   System.currentTimeMillis()系统当前时间
-            if(!TextUtils.equals(status,"HomeFragment")){
+            if(!TextUtils.equals(status,"SearchFragment")){
                 return super.onKeyDown(keyCode, event);
             }
             if (keyCode == KeyEvent.KEYCODE_BACK) {

@@ -23,4 +23,4 @@ public class NoteFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
     }
-}
+ }
