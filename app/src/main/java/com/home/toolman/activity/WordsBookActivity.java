@@ -5,6 +5,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.home.toolman.R;
 import com.home.toolman.adapter.WordsAdapter;
@@ -17,9 +22,9 @@ import java.util.List;
 
 import static org.litepal.LitePalApplication.getContext;
 
-public class WordsBookActivity extends AppCompatActivity {
+public class WordsBookActivity extends AppCompatActivity implements View.OnClickListener{
     private RecyclerView bookRecyclerView;
-    List<WordsBook> bookList=new ArrayList<>();
+    private List<WordsBook> bookList=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,12 @@ public class WordsBookActivity extends AppCompatActivity {
         setContentView(R.layout.layout_words_book);
         bookRecyclerView=findViewById(R.id.words_book);
         initWordsBook();
+    }
+
+
+    @Override
+    public void onClick(View v) {
+
     }
 
     private void initWordsBook(){
@@ -39,4 +50,9 @@ public class WordsBookActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initWordsBook();
+    }
 }

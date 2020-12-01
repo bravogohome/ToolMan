@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.WordsBookActivity" />
+        <activity
+            android:launchMode="singleTask"
+            android:name=".activity.WordsBookActivity" />
         <activity android:name=".activity.TranslateResultActivity" />
         <activity
             android:name=".activity.MainActivity"
