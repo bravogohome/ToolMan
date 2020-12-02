@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.home.toolman.R;
 import com.home.toolman.activity.TranslateResultActivity;
+import com.home.toolman.fragment.search.SearchFragment;
 import com.home.toolman.vo.Record;
 
 import org.litepal.crud.DataSupport;
@@ -61,7 +62,7 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.ViewHolder
             public void onClick(View v) {
                 int position=holder.getAdapterPosition();
                 Record record=recordList.get(position);
-                Record newRecord=new Record(record.getWord(),R.drawable.ic_delete_record,record.getFromParam(),record.getToParam(),record.getResult());
+                Record newRecord=new Record(record.getWord(),R.drawable.ic_delete_record,record.getFromParam(),record.getToParam(),record.getResult(),record.getAddTime()+";"+ SearchFragment.getRecordTime());
                 Intent intent=new Intent(getContext(), TranslateResultActivity.class);
                 intent.putExtra("fromParam",record.getFromParam());
                 intent.putExtra("toParam",record.getToParam());

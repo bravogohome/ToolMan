@@ -8,13 +8,15 @@ public class Record extends DataSupport {
     private String fromParam;
     private String toParam;
     private String result;
+    private String addTime;
 
-    public Record(String word, int imageID, String fromParam, String toParam, String result){
+    public Record(String word, int imageID, String fromParam, String toParam, String result,String addTime){
         this.word=word;
         this.imageID=imageID;
         this.fromParam=fromParam;
         this.toParam=toParam;
         this.result=result;
+        this.addTime=addTime;
     }
     public String getFromParam() {
         return fromParam;
@@ -41,6 +43,13 @@ public class Record extends DataSupport {
     }
 
 
+    public String getAddTime() {
+        return addTime;
+    }
+
+    public void setAddTime(String addTime) {
+        this.addTime = addTime;
+    }
 
     public String getWord() {
         return word;

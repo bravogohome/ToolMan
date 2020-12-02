@@ -40,7 +40,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.litepal.crud.DataSupport;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -332,8 +334,14 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
                 DataSupport.deleteAll(Record.class,"word = ? and result = ?",word,MainActivity.result);
             }
         }
-        Record record=new Record(word,R.drawable.ic_delete_record,fromParam,toParam,MainActivity.result);
+        Record record=new Record(word,R.drawable.ic_delete_record,fromParam,toParam,MainActivity.result,getRecordTime());
         record.save();
+    }
+    public static String getRecordTime(){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日");
+        Date date = new Date(System.currentTimeMillis());
+        Log.d("SearchFragment", "getRecordTime: "+simpleDateFormat.format(date));
+        return simpleDateFormat.format(date);
     }
 
     /**
