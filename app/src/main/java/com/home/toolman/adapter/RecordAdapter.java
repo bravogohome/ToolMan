@@ -72,7 +72,7 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.ViewHolder
                 getContext().startActivity(intent);
                 recordList.remove(position);
                 DataSupport.deleteAll(Record.class,"word = ? and result=?",record.getWord(),record.getResult());
-                newRecord.setCount(record.getCount()+1);
+                newRecord.setCount(record.getCount());
                 recordList.add(newRecord);
                 newRecord.save();
                 Log.d("TAG", "addRecord: "+newRecord.getAddTime());

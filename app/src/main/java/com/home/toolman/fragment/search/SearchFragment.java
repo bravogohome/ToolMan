@@ -63,6 +63,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
     private LinearLayout recordLayout;
     private TextView deleteAllRecord;
     List<Record> recordList=new ArrayList<>();
+    private TextView mostSearch;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -75,6 +76,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         languagesTo.setOnItemSelectedListener(new SelectedListener());
         editText=(EditText)root.findViewById(R.id.edit_text_fragment_search);
         editText.setOnClickListener(this);
+        mostSearch=(TextView)root.findViewById(R.id.text_most_search);
         deleteOrigin=(Button)root.findViewById(R.id.button_delete_origin_text);
         deleteOrigin.setOnClickListener(this);
         root.findViewById(R.id.button_voice_to_origin).setOnClickListener(this);
@@ -88,7 +90,16 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         deleteAllRecord=(TextView)root.findViewById(R.id.delete_all_record);
         deleteAllRecord.setOnClickListener(this);
         initRecords();
+        initRank();
         return root;
+    }
+    private void initRank(){
+        mostSearch.setText(null);
+        List<Record> mostList=new ArrayList<>();
+        mostList=DataSupport.order("count desc").limit(5).find(Record.class);
+        for (int i=0;i<5;i++){
+            mostSearch.setText(mostSearch.getText().toString()+mostList.get(i).getWord()+"\t"+mostList.get(i).getCount()+"次\n");
+        }
     }
     private void initRecords(){
         List<Record> rList=new ArrayList<>();
@@ -416,6 +427,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
     public void onResume() {
         super.onResume();
         initRecords();
+        initRank();
     }
 
 }
