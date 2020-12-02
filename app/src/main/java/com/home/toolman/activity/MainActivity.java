@@ -2,17 +2,23 @@ package com.home.toolman.activity;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.home.toolman.BaseActivity;
 import com.home.toolman.R;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechUtility;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -23,6 +29,7 @@ import org.litepal.tablemanager.Connector;
 public class MainActivity extends BaseActivity {
     public static String status=null;
     public static String result=null;
+    public static int isMe=0;
     private long mExitTime;
 
     public static Context getContext() {
@@ -86,4 +93,6 @@ public class MainActivity extends BaseActivity {
             }
         return super.onKeyDown(keyCode, event);
     }
+
+
 }

@@ -1,6 +1,7 @@
 package com.home.toolman.adapter;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,7 +63,7 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.ViewHolder
             public void onClick(View v) {
                 int position=holder.getAdapterPosition();
                 Record record=recordList.get(position);
-                Record newRecord=new Record(record.getWord(),R.drawable.ic_delete_record,record.getFromParam(),record.getToParam(),record.getResult(),record.getAddTime()+";"+ SearchFragment.getRecordTime());
+                Record newRecord=new Record(record.getWord(),R.drawable.ic_delete_record,record.getFromParam(),record.getToParam(),record.getResult(),SearchFragment.getRecordTime()+";"+ record.getAddTime());
                 Intent intent=new Intent(getContext(), TranslateResultActivity.class);
                 intent.putExtra("fromParam",record.getFromParam());
                 intent.putExtra("toParam",record.getToParam());
@@ -71,8 +72,10 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.ViewHolder
                 getContext().startActivity(intent);
                 recordList.remove(position);
                 DataSupport.deleteAll(Record.class,"word = ? and result=?",record.getWord(),record.getResult());
+                newRecord.setCount(record.getCount()+1);
                 recordList.add(newRecord);
                 newRecord.save();
+                Log.d("TAG", "addRecord: "+newRecord.getAddTime());
             }
         });
         return holder;

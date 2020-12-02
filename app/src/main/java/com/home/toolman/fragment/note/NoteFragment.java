@@ -32,7 +32,6 @@ public class NoteFragment extends Fragment implements RecycleItemTouchHelper.Ite
     List<WordsBook> note;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        Log.d("NoteFragment", "onCreateView: ");
         MainActivity.status="NoteFragment";
         View root = inflater.inflate(R.layout.fragment_note, container, false);
 
@@ -77,6 +76,7 @@ public class NoteFragment extends Fragment implements RecycleItemTouchHelper.Ite
                 note.remove(position);
                 noteView.getAdapter().notifyDataSetChanged();
                 DataSupport.deleteAll(WordsBook.class,"origin=? and result=? ",word.getOrigin(),word.getResult());
+                //initNote();
             }
         });
         dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {

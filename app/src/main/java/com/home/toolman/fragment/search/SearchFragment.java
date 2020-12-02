@@ -328,14 +328,17 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         if (TextUtils.isEmpty(word)){
             return ;
         }
+        Record record=new Record(word,R.drawable.ic_delete_record,fromParam,toParam,MainActivity.result,getRecordTime());
         List<Record> recordList=DataSupport.findAll(Record.class);
         for (int i=0;i<recordList.size();i++){
             if(TextUtils.equals(recordList.get(i).getWord(),word)&&TextUtils.equals(recordList.get(i).getResult(),MainActivity.result)){
+                record.setAddTime(record.getAddTime()+";"+recordList.get(i).getAddTime());
+                record.setCount(recordList.get(i).getCount()+1);
                 DataSupport.deleteAll(Record.class,"word = ? and result = ?",word,MainActivity.result);
             }
         }
-        Record record=new Record(word,R.drawable.ic_delete_record,fromParam,toParam,MainActivity.result,getRecordTime());
         record.save();
+        Log.d("TAG", "addRecord: "+record.getAddTime());
     }
     public static String getRecordTime(){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日");

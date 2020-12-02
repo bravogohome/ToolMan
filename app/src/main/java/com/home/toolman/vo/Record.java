@@ -9,14 +9,24 @@ public class Record extends DataSupport {
     private String toParam;
     private String result;
     private String addTime;
+    private int count;
 
-    public Record(String word, int imageID, String fromParam, String toParam, String result,String addTime){
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public Record(String word, int imageID, String fromParam, String toParam, String result, String addTime){
         this.word=word;
         this.imageID=imageID;
         this.fromParam=fromParam;
         this.toParam=toParam;
         this.result=result;
         this.addTime=addTime;
+        count=1;
     }
     public String getFromParam() {
         return fromParam;
