@@ -90,48 +90,46 @@ public class ArticleAdapter extends GroupRecyclerAdapter<String, Article> {
             list.add(create("有声励志英文演讲：Diversify your gift",
                     "There lies your greatest secret for success.You've got to discover your gift.And when you discover it,you got to soak it.You got to wring it out,man.You got to diversify it",
                     "https://imagev2.xmcdn.com/storages/56b6-audiofreehighqps/09/94/CMCoOR8DdDLFAAzQHgBinKn4.jpg!strip=1&quality=7&magick=jpg&op_type=5&upload_type=cover&name=web_large&device_type=ios"));
-            list.add(create("美电视台记者因误报有关弗林新闻被停职四周",
-                    "【环球网报道】据俄罗斯卫星网12月3日报道，美国ABC电视台记者布莱恩·罗素因在有关美国总统前国家安全顾问迈克尔·弗林的新闻报道中的失误，临时被停职。",
-                    "http://cms-bucket.nosdn.127.net/5d18566fde70407b9cc3a728822115c320171203133214.jpeg?imageView&thumbnail=550x0"));
+            list.add(create("百度翻译字幕组",
+                    "疫情改变了一切，不要忘记关心身处异国他乡的朋友们! 2019-nCoV changes everything",
+                    "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2027240073,3294694557&fm=26&gp=0.jpg"));
             list.add(create("英语杂货店",
                     "\"你行你上啊\"不要再说成\"You can you up!\"啦，正确的表达是...put up or shut up",
                     "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606927719716&di=d7f5049b40a10b16386b0c868d655a7a&imgtype=0&src=http%3A%2F%2Fphotocdn.sohu.com%2F20151028%2Fmp38301942_1446013674271_6.jpeg"));
         } else if (p == 1) {
             list.add(create(
-                    "2019年投产 电咖整车生产基地落户浙江绍兴",
-                    "网易汽车11月30日报道 两周前的广州车展上，电咖发布了其首款电动汽车EV10，官方指导价为13.38万-14.18万，扣除补贴后的零售价为5.98万元-6.78万元，性价比很高。抛开车辆本身，引起业界关注的是这家新势力造车企业的几位核心成员，当年上汽大众团队的三位老兵--张海亮、向东平、牛胜福携手用了957天造了一辆可以上市的车。",
-                    "http://cms-bucket.nosdn.127.net/674c392123254bb69bdd9227442965eb20171129203658.jpeg?imageView&thumbnail=550x0"));
+                    "The Rivals in the Life生活中的对手",
+                    "Jaguar is an endangered animal. It is said that there are less than 20 jaguars in the world currently, one of which is now living in the national zoo of Peru. In order to protect this jaguar, Peruvians singled out a pitch of land in the zoo for it, where there are herds of cattle, sheep and deer for the jaguar to eat. ",
+                    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606928622624&di=9be5215264657e8dfe9510f0ad4f0093&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_pic%2F16%2F12%2F05%2Fc068cca1cdb238baaf00d4a6c7b0d2f5.jpg"));
             list.add(create(
-                    "2017年进入尾声，苹果大笔押注的ARkit还好么？",
-                    "谷歌推出了AR眼镜、ARCore平台和应用在手机上的Project Tango，Facebook也上线了AR开发平台和工具。至于苹果，更是把AR当做发展的重中之重。在新品iPhone8和iPhoneX中，后置摄像头专为AR进行校准，前置摄像头还添加了可以带来更好AR效果的深度传感器。",
-                    "http://cms-bucket.nosdn.127.net/catchpic/7/76/76135ac5d3107a1d5ba11a8ee2fc7e27.jpg?imageView&thumbnail=550x0"));
+                    "The Life in Your Twenties 20岁的生活",
+                    "On Constant Worrying 关于持续的担忧 Dufu says one of the greatest pieces of advice she ever received was about her constant worrying. “My mentor said, ‘If you would spend less time worrying about choices you don’t have and actually creating those choices, you would",
+                    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606928622615&di=e2ac852b15939f088592049ff8cc7f98&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F12%2F16%2F7153742bd0cbaeee2168a906c81a9a4f.jpg"));
             list.add(create(
-                    "亚马逊CTO：我们要让人类成为机器人的中心！",
-                    "那些相信应用下载会让世界变得更美好的智能手机布道者和应用爱好者们，会在AWS re:Invent大会上感到不自在。亚马逊网络服务首席技术官Werner Vogels表示，所有这些都未能实现信息的民主化。",
-                    "http://cms-bucket.nosdn.127.net/ddb758f16a7d4aa3aa422ec385fc3e5020171204081818.jpeg?imageView&thumbnail=550x0"));
-            list.add(create(
-                    "有特斯拉车主想用免费的充电桩挖矿，但这可能行不通",
-                    "在社交网络 Facebook 上的一个特斯拉车主群组中，有人开脑洞说可以尝试自己组装矿机放在特斯拉后备箱中，接入车载电池的电源，然后将车停到超级充电桩附近，就能用免费获得的电力挖矿了。",
-                    "http://crawl.nosdn.127.net/nbotreplaceimg/4ce9c743e6c02f6777d22278e2ef8bc3/2b33e32532db204fe207693c82719660.jpg"));
+                    "汇聚各种经典演讲的网站",
+                    "American Rhetoric: The Power of Oratory in the United States",
+                    "https://pic4.zhimg.com/80/v2-02346273f65be074e1fb44ec628d507b_720w.jpg?source=1940ef5c"));
         } else if (p == 2) {
             list.add(create(
-                    "2017年进入尾声，苹果大笔押注的ARkit还好么？",
-                    "谷歌推出了AR眼镜、ARCore平台和应用在手机上的Project Tango，Facebook也上线了AR开发平台和工具。至于苹果，更是把AR当做发展的重中之重。在新品iPhone8和iPhoneX中，后置摄像头专为AR进行校准，前置摄像头还添加了可以带来更好AR效果的深度传感器。",
-                    "http://cms-bucket.nosdn.127.net/catchpic/7/76/76135ac5d3107a1d5ba11a8ee2fc7e27.jpg?imageView&thumbnail=550x0"));
+                    "MOMENTS FROM THE TOP 100 SPEECHES",
+                    "John F. Kennedy We dare not forget today that we are the heirs of that first revolution. Let the word go forth from this time and place, to friend and foe alike, that the torch has been passed to a new generation of Americans -- born in this century, tempered by war, disciplined by a hard and bitter peace, proud of our ancient heritage, and unwilling to witness or permit the slow undoing of those human rights to which this nation has always been committed, and to which we are committed today at home and around the world.",
+                    "https://pic1.zhimg.com/80/v2-7e590ed569b1b4ef5b1374b462ba7947_720w.jpg?source=1940ef5c"));
             list.add(create(
-                    "亚马逊CTO：我们要让人类成为机器人的中心！",
-                    "那些相信应用下载会让世界变得更美好的智能手机布道者和应用爱好者们，会在AWS re:Invent大会上感到不自在。亚马逊网络服务首席技术官Werner Vogels表示，所有这些都未能实现信息的民主化。",
-                    "http://cms-bucket.nosdn.127.net/ddb758f16a7d4aa3aa422ec385fc3e5020171204081818.jpeg?imageView&thumbnail=550x0"));
-            list.add(create("中企投资巴西获支持 英媒:巴西人感激\"保住饭碗\"",
-                    "参考消息网12月4日报道 英媒称，里约热内卢附近的阿苏港曾被埃克·巴蒂斯塔称为“通往中国的公路”，10多年前，这位现已名誉扫地的巴西前首富创建了这个超级港，大宗商品热潮结束后，他在巴西的商业帝国几乎无一幸存并于2014年破产，但此后至今有一个项目仍蓬勃发展，那就是阿苏港。",
-                    "http://cms-bucket.nosdn.127.net/catchpic/8/8b/8ba2d19b7f63efc5cf714960d5edd2c3.jpg?imageView&thumbnail=550x0"));
-            list.add(create("美电视台记者因误报有关弗林新闻被停职四周",
-                    "【环球网报道】据俄罗斯卫星网12月3日报道，美国ABC电视台记者布莱恩·罗素因在有关美国总统前国家安全顾问迈克尔·弗林的新闻报道中的失误，临时被停职。",
-                    "http://cms-bucket.nosdn.127.net/5d18566fde70407b9cc3a728822115c320171203133214.jpeg?imageView&thumbnail=550x0"));
+                    "Emma Watson 2016年关于平权问题的联合国演讲",
+                    "联合国妇女署发布“他为她（HeForShe）：影响力10x10x10——大学生平等报告”，艾玛再次登台发表演讲，强调了大学生活对构建平等社会的重要性。美丽大方，双商极高，这样的女明星谁不爱？",
+                    "https://pic2.zhimg.com/80/v2-2f71efbb891bf24f5f23c1ee3628d25e_720w.jpg?source=1940ef5c"));
             list.add(create(
-                    "2019年投产 电咖整车生产基地落户浙江绍兴",
-                    "网易汽车11月30日报道 两周前的广州车展上，电咖发布了其首款电动汽车EV10，官方指导价为13.38万-14.18万，扣除补贴后的零售价为5.98万元-6.78万元，性价比很高。抛开车辆本身，引起业界关注的是这家新势力造车企业的几位核心成员，当年上汽大众团队的三位老兵--张海亮、向东平、牛胜福携手用了957天造了一辆可以上市的车。",
-                    "http://cms-bucket.nosdn.127.net/674c392123254bb69bdd9227442965eb20171129203658.jpeg?imageView&thumbnail=550x0"));
+                    "The Rivals in the Life生活中的对手",
+                    "Jaguar is an endangered animal. It is said that there are less than 20 jaguars in the world currently, one of which is now living in the national zoo of Peru. In order to protect this jaguar, Peruvians singled out a pitch of land in the zoo for it, where there are herds of cattle, sheep and deer for the jaguar to eat. ",
+                    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606928622624&di=9be5215264657e8dfe9510f0ad4f0093&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_pic%2F16%2F12%2F05%2Fc068cca1cdb238baaf00d4a6c7b0d2f5.jpg"));
+            list.add(create(
+                    "The Life in Your Twenties 20岁的生活",
+                    "On Constant Worrying 关于持续的担忧 Dufu says one of the greatest pieces of advice she ever received was about her constant worrying. “My mentor said, ‘If you would spend less time worrying about choices you don’t have and actually creating those choices, you would",
+                    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606928622615&di=e2ac852b15939f088592049ff8cc7f98&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F12%2F16%2F7153742bd0cbaeee2168a906c81a9a4f.jpg"));
+            list.add(create(
+                    "汇聚各种经典演讲的网站",
+                    "American Rhetoric: The Power of Oratory in the United States",
+                    "https://pic4.zhimg.com/80/v2-02346273f65be074e1fb44ec628d507b_720w.jpg?source=1940ef5c"));
         }
 
 

@@ -27,6 +27,7 @@ public class NewsFragment extends Fragment implements  CalendarView.OnYearChange
     private CalendarView cv;
     private TextView recordNum,day,curLunar,curMonthDay,curYear;
     private FrameLayout toToday;
+    private Calendar mCalendar;
 
     private int mYear;
     CalendarLayout mCalendarLayout;
@@ -43,6 +44,8 @@ public class NewsFragment extends Fragment implements  CalendarView.OnYearChange
         curYear=(TextView)root.findViewById(R.id.tv_year);
         day.setText(String.valueOf(cv.getCurDay()));
         recordNum=(TextView)root.findViewById(R.id.record_num);
+        mCalendar=cv.getSelectedCalendar();
+        initView();
         curMonthDay.setText(cv.getSelectedCalendar().getMonth()+"月"+cv.getSelectedCalendar().getDay()+"日");
         curYear.setText(String.valueOf(cv.getSelectedCalendar().getYear()));
         curLunar.setText(cv.getSelectedCalendar().getLunar());
@@ -55,27 +58,8 @@ public class NewsFragment extends Fragment implements  CalendarView.OnYearChange
 
             @Override
             public void onCalendarSelect(Calendar calendar, boolean isClick) {
-                curLunar.setVisibility(View.VISIBLE);
-                curYear.setVisibility(View.VISIBLE);
-                curMonthDay.setText(calendar.getMonth()+"月"+calendar.getDay()+"日");
-                curYear.setText(String.valueOf(calendar.getYear()));
-                curLunar.setText(calendar.getLunar());
-                calendar=cv.getSelectedCalendar();
-                curMonthDay.setText(calendar.getMonth()+"月"+calendar.getDay()+"日");
-                curYear.setText(String.valueOf(calendar.getYear()));
-                curLunar.setText(calendar.getLunar());
-                String timeFormat="%"+calendar.getYear()+"年"+calendar.getMonth()+"月"+calendar.getDay()+"日"+"%";
-                String timeFormat1="%"+calendar.getYear()+"年"+calendar.getMonth()+"月0"+calendar.getDay()+"日"+"%";
-                String timeFormat2="%"+calendar.getYear()+"年0"+calendar.getMonth()+"月0"+calendar.getDay()+"日"+"%";
-                String timeFormat3="%"+calendar.getYear()+"年0"+calendar.getMonth()+"月"+calendar.getDay()+"日"+"%";
-                List<Record> recordList= DataSupport.where("addTime like ? or addTime like ? or addTime like ? or addTime like ? ",timeFormat,timeFormat1,timeFormat2,timeFormat3).find(Record.class);
-                if (!recordList.isEmpty()){
-                    recordNum.setText("总搜索数："+recordList.size());
-                }else{
-                    recordNum.setText("无搜索记录");
-                }
-
-                mYear = calendar.getYear();
+                mCalendar=calendar;
+                initView();
             }
 
         });
@@ -111,6 +95,30 @@ public class NewsFragment extends Fragment implements  CalendarView.OnYearChange
         });
 
         return root;
+    }
+
+    private void initView(){
+        curLunar.setVisibility(View.VISIBLE);
+        curYear.setVisibility(View.VISIBLE);
+        curMonthDay.setText(mCalendar.getMonth()+"月"+mCalendar.getDay()+"日");
+        curYear.setText(String.valueOf(mCalendar.getYear()));
+        curLunar.setText(mCalendar.getLunar());
+        mCalendar=cv.getSelectedCalendar();
+        curMonthDay.setText(mCalendar.getMonth()+"月"+mCalendar.getDay()+"日");
+        curYear.setText(String.valueOf(mCalendar.getYear()));
+        curLunar.setText(mCalendar.getLunar());
+        String timeFormat="%"+mCalendar.getYear()+"年"+mCalendar.getMonth()+"月"+mCalendar.getDay()+"日"+"%";
+        String timeFormat1="%"+mCalendar.getYear()+"年"+mCalendar.getMonth()+"月0"+mCalendar.getDay()+"日"+"%";
+        String timeFormat2="%"+mCalendar.getYear()+"年0"+mCalendar.getMonth()+"月0"+mCalendar.getDay()+"日"+"%";
+        String timeFormat3="%"+mCalendar.getYear()+"年0"+mCalendar.getMonth()+"月"+mCalendar.getDay()+"日"+"%";
+        List<Record> recordList= DataSupport.where("addTime like ? or addTime like ? or addTime like ? or addTime like ? ",timeFormat,timeFormat1,timeFormat2,timeFormat3).find(Record.class);
+        if (!recordList.isEmpty()){
+            recordNum.setText("总搜索数："+recordList.size());
+        }else{
+            recordNum.setText("无搜索记录");
+        }
+
+        mYear = mCalendar.getYear();
     }
 
     @Override
