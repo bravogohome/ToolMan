@@ -90,6 +90,7 @@ public class NewsFragment extends Fragment implements  CalendarView.OnYearChange
                 cv.showYearSelectLayout(mYear);
                 curLunar.setVisibility(View.GONE);
                 curYear.setVisibility(View.GONE);
+                recordNum.setVisibility(View.GONE);
                 curMonthDay.setText(String.valueOf(mYear));
             }
         });
@@ -100,6 +101,7 @@ public class NewsFragment extends Fragment implements  CalendarView.OnYearChange
     private void initView(){
         curLunar.setVisibility(View.VISIBLE);
         curYear.setVisibility(View.VISIBLE);
+        recordNum.setVisibility(View.VISIBLE);
         curMonthDay.setText(mCalendar.getMonth()+"月"+mCalendar.getDay()+"日");
         curYear.setText(String.valueOf(mCalendar.getYear()));
         curLunar.setText(mCalendar.getLunar());

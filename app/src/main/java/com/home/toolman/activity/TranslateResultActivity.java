@@ -1,6 +1,7 @@
 package com.home.toolman.activity;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 
@@ -46,7 +47,6 @@ public class TranslateResultActivity extends BaseActivity implements View.OnClic
         linearLayout.setVisibility(View.GONE);
         textLoading=(TextView)findViewById(R.id.text_loading);
         imageLoading=(ImageView)findViewById(R.id.image_loading);
-
         textOrigin=(TextView)findViewById(R.id.text_trans_origin);
         textResult=(TextView)findViewById(R.id.text_trans_result);
         textLibrary=(TextView)findViewById(R.id.text_trans_library);
@@ -67,6 +67,10 @@ public class TranslateResultActivity extends BaseActivity implements View.OnClic
 
         Button textButton=(Button)findViewById(R.id.to_book);
         textButton.setOnClickListener(this);
+        Button toBaiduTrans=(Button)findViewById(R.id.button_to_baidu_trans);
+        toBaiduTrans.setOnClickListener(this);
+        Button toWangyiTrans=(Button)findViewById(R.id.button_to_wangyi_trans);
+        toWangyiTrans.setOnClickListener(this);
     }
     private void initFavoriteButton(){
         wordsBook= DataSupport.findAll(WordsBook.class);
@@ -106,6 +110,18 @@ public class TranslateResultActivity extends BaseActivity implements View.OnClic
             case R.id.to_book:
                 Intent intent=new Intent(this,WordsBookActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.button_to_baidu_trans:
+                Intent intentToBaidu = new Intent();
+                PackageManager packageManager = getPackageManager();
+                intentToBaidu = packageManager.getLaunchIntentForPackage("com.baidu.baidutranslate");
+                startActivity(intentToBaidu);
+                break;
+            case R.id.button_to_wangyi_trans:
+                Intent intentToWangyi = new Intent();
+                PackageManager packageManager1 = getPackageManager();
+                intentToWangyi = packageManager1.getLaunchIntentForPackage("com.youdao.dict");
+                startActivity(intentToWangyi);
                 break;
             default:
 

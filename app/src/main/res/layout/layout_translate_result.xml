@@ -10,20 +10,21 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:id="@+id/layout_translate_result"
-        android:visibility="gone">
+        android:visibility="visible">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:background="@drawable/bg_origin"
+        android:layout_marginBottom="20dp">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:id="@+id/text_trans_origin"
             android:gravity="center_vertical"
             android:textSize="30sp"
-            android:textColor="#454545"
+            android:textColor="#ffffff"
             android:layout_marginLeft="30dp"/>
         <TextView
             android:layout_width="match_parent"
@@ -36,13 +37,13 @@
             android:id="@+id/text_trans_library"
             android:visibility="gone"/>
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/button_add_to_words_book"
             android:src="@drawable/ic_favorite_word_no"
             android:keepScreenOn="false"
             android:layout_gravity="center"
-            android:layout_marginRight="25dp"/>
+            android:layout_marginRight="50dp"/>
     </LinearLayout>
 
     <androidx.viewpager.widget.ViewPager
@@ -57,13 +58,34 @@
             android:background="#f0f0f0"
             android:textColor="#ff0000"></androidx.viewpager.widget.PagerTabStrip>
     </androidx.viewpager.widget.ViewPager>
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_card1">
     <Button
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/to_book"
         android:layout_gravity="center"
-        android:background="@drawable/ic_words_book" />
+        android:layout_marginLeft="65dp"
+        android:background="@drawable/ic_to_words_book" />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/button_to_baidu_trans"
+        android:background="@drawable/ic_to_baidu_trans"
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="100dp"
+        android:id="@+id/button_to_wangyi_trans"
+        android:background="@drawable/ic_to_wangyi_trans"/>
+</LinearLayout>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
