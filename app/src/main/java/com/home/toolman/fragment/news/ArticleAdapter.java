@@ -81,21 +81,21 @@ public class ArticleAdapter extends GroupRecyclerAdapter<String, Article> {
     private static List<Article> create(int p) {
         List<Article> list = new ArrayList<>();
         if (p == 0) {
-            list.add(create("新西兰克马德克群岛发生5.7级地震 震源深度10千米",
-                    "#地震快讯#中国地震台网正式测定：12月04日08时08分在克马德克群岛（南纬32.82度，西经178.73度）发生5.7级地震，震源深度10千米。",
-                    "http://cms-bucket.nosdn.127.net/catchpic/2/27/27e2ce7fd02e6c096e21b1689a8a3fe9.jpg?imageView&thumbnail=550x0"));
-            list.add(create("俄罗斯喊冤不当\"背锅侠\" 俄美陷入\"后真相\"旋涡",
-                    "“差到令人震惊”，但不怪特朗普。俄罗斯总理德米特里·梅德韦杰夫近日在谈到俄美关系时这样说。俄罗斯近来连遭美国“恶毒”指责和西方国家连环出击。一些国际舆论认为，俄罗斯成了“背锅侠”，俄罗斯自己也公开喊冤斥责美国。在俄美你来我往的互掐中，真相似乎变得已不那么重要了。",
-                    "http://cms-bucket.nosdn.127.net/catchpic/c/c8/c8b0685089258b82f3ca1997def78d8d.png?imageView&thumbnail=550x0"));
-            list.add(create("中企投资巴西获支持 英媒:巴西人感激\"保住饭碗\"",
-                    "参考消息网12月4日报道 英媒称，里约热内卢附近的阿苏港曾被埃克·巴蒂斯塔称为“通往中国的公路”，10多年前，这位现已名誉扫地的巴西前首富创建了这个超级港，大宗商品热潮结束后，他在巴西的商业帝国几乎无一幸存并于2014年破产，但此后至今有一个项目仍蓬勃发展，那就是阿苏港。",
-                    "http://cms-bucket.nosdn.127.net/catchpic/8/8b/8ba2d19b7f63efc5cf714960d5edd2c3.jpg?imageView&thumbnail=550x0"));
+            list.add(create("看视频学英语",
+                    "危机如何影响历史--【2020国际翻译日：Finding the words for a world in crisis】",
+                    "http://www.yarace.com/upload/images/2020/9/3015576968.jpg"));
+            list.add(create("开言英语",
+                    "Gif到底怎么读？今天终于破案了！Graphics Interchange Format",
+                    "http://fanyi-app.baidu.com/static/passage/2020-07/2020-07-06/001/image/datasrc0.jpg"));
+            list.add(create("有声励志英文演讲：Diversify your gift",
+                    "There lies your greatest secret for success.You've got to discover your gift.And when you discover it,you got to soak it.You got to wring it out,man.You got to diversify it",
+                    "https://imagev2.xmcdn.com/storages/56b6-audiofreehighqps/09/94/CMCoOR8DdDLFAAzQHgBinKn4.jpg!strip=1&quality=7&magick=jpg&op_type=5&upload_type=cover&name=web_large&device_type=ios"));
             list.add(create("美电视台记者因误报有关弗林新闻被停职四周",
                     "【环球网报道】据俄罗斯卫星网12月3日报道，美国ABC电视台记者布莱恩·罗素因在有关美国总统前国家安全顾问迈克尔·弗林的新闻报道中的失误，临时被停职。",
                     "http://cms-bucket.nosdn.127.net/5d18566fde70407b9cc3a728822115c320171203133214.jpeg?imageView&thumbnail=550x0"));
-            list.add(create("预计明年3月上市 曝全新奥迪Q5L无伪谍照",
-                    "随着之前全新一代国产奥迪Q5L在工信部目录亮相，最近曝光的测试车也都基本褪去了伪装，不过正式上市还是要等到2018年3月份。从最新曝光的内饰来看，轴距的加长令后排的空间有着非常明显的提升。",
-                    "http://cms-bucket.nosdn.127.net/eda9ca222352470190c4f0d6b9a8c29420171201160854.jpeg?imageView&thumbnail=550x0"));
+            list.add(create("英语杂货店",
+                    "\"你行你上啊\"不要再说成\"You can you up!\"啦，正确的表达是...put up or shut up",
+                    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606927719716&di=d7f5049b40a10b16386b0c868d655a7a&imgtype=0&src=http%3A%2F%2Fphotocdn.sohu.com%2F20151028%2Fmp38301942_1446013674271_6.jpeg"));
         } else if (p == 1) {
             list.add(create(
                     "2019年投产 电咖整车生产基地落户浙江绍兴",
