@@ -97,9 +97,14 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         mostSearch.setText(null);
         List<Record> mostList=new ArrayList<>();
         mostList=DataSupport.order("count desc").limit(5).find(Record.class);
-        for (int i=0;i<5;i++){
-            mostSearch.setText(mostSearch.getText().toString()+mostList.get(i).getWord()+"\t"+mostList.get(i).getCount()+"次\n");
+        if (!mostList.isEmpty()){
+            for (int i=0;i<mostList.size();i++){
+                mostSearch.setText(mostSearch.getText().toString()+mostList.get(i).getWord()+"\t"+mostList.get(i).getCount()+"次\n");
+            }
+        }else{
+            mostSearch.setText("暂无搜索记录");
         }
+
     }
     private void initRecords(){
         List<Record> rList=new ArrayList<>();
